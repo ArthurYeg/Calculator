@@ -55,5 +55,8 @@ public class Calculator {
     }
     private static void printInQuotes(String text) {
         System.out.println("\""+text+"\"");
+
+         if (text.length()>40)
+                System.out.println(" "+text.substring(0,40)+"...");
     }
 }
