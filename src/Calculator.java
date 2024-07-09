@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Calculator {
+public class TestCalculator {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
@@ -31,7 +31,7 @@ public class Calculator {
             printInQuotes(data[0] + data[1]);
         } else if (action == '*') {
             int multiplier = Integer.parseInt(data[1]);
-            String result = "";
+            String result = "" ;
             for (int i = 0; i < multiplier; i++) {
                 result += data[0];
             }
@@ -49,11 +49,12 @@ public class Calculator {
             int newLen = data[0].length() / Integer.parseInt(data[1]);
             String result = data[0].substring(0, newLen);
             printInQuotes(result);
+
         }
     }
     private static void printInQuotes(String text) {
-        System.out.print(text);
-         if (text.length()>40)
-                System.out.println(" "+text.substring(0,40)+"...");
+        if (text.length() > 40)
+            System.out.println(" " + text.substring(0, 40) + "..." + " ");
+
     }
 }
