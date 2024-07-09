@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Calculator {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
@@ -50,12 +49,10 @@ public class Calculator {
             int newLen = data[0].length() / Integer.parseInt(data[1]);
             String result = data[0].substring(0, newLen);
             printInQuotes(result);
-
         }
     }
     private static void printInQuotes(String text) {
-        System.out.println("\""+text+"\"");
-
+        System.out.print(text);
          if (text.length()>40)
                 System.out.println(" "+text.substring(0,40)+"...");
     }
