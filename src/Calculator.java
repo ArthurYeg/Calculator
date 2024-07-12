@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class Calculator1 {
     public static void main(String[] args) throws Exception {
+
         Scanner scn = new Scanner(System.in);
         String exp = scn.nextLine();
         exp = exp.replace("\"", "");
         char action;
         String[] data;
-
         if (exp.contains("+")) {
             data = exp.split("\\+");
             action = '+';
@@ -23,10 +23,8 @@ public class Calculator1 {
         } else {
             throw new Exception("Некорректный знак действия");
         }
-       
         if (data[0].length() > 10) throw new Exception("Введено больше 10 символов в первой части");
         if (data.length > 1 && data[1].length() > 10) throw new Exception("Введено больше 10 символов во второй части");
-
         for (int i = 0; i < data.length; i++) {
             data[i] = data[i].replace("\"", "");
         }
