@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Calculator1 {
+public class Calculator {
     public static void main(String[] args) throws Exception {
 
         Scanner scn = new Scanner(System.in);
@@ -25,6 +25,7 @@ public class Calculator1 {
         }
         if (data[0].length() > 10) throw new Exception("Введено больше 10 символов в первой части");
         if (data.length > 1 && data[1].length() > 10) throw new Exception("Введено больше 10 символов во второй части");
+        
         for (int i = 0; i < data.length; i++) {
             data[i] = data[i].replace("\"", "");
         }
